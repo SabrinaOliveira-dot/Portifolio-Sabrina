@@ -1,222 +1,427 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="dark">
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sabrina Oliveira | Desenvolvedora Front-end</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabrina Oliveira — Desenvolvedora Front-End</title>
+  <meta name="description" content="Portfólio de Sabrina Oliveira, desenvolvedora front-end.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header>
-        <div class="logo">&lt;/&gt; Sabrina</div>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">Sobre</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projetos</a>
-            <a href="#contact">Contato</a>
-        </nav>
-        <div class="header-actions">
-            <button id="theme-toggle" aria-label="Alternar tema"><i class="fas fa-moon"></i></button>
-            <a href="#contact" class="btn btn-primary">Contrate-me <i class="fas fa-arrow-up-right-from-square"></i></a>
-        </div>
-    </header>
+  <div class="petals" id="petals" aria-hidden="true"></div>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <span class="badge">DESENVOLVEDORA FRONT-END</span>
-            <h1>Olá, sou a <span class="highlight">Sabrina</span><br>Eu construo coisas para a web.</h1>
-            <p>Sou estudante de Análise e Desenvolvimento de Sistemas e desenvolvedora front-end, apaixonada por criar experiências digitais excepcionais com tecnologias modernas.</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">Ver meu Trabalho <i class="fas fa-arrow-up-right-from-square"></i></a>
-                <a href="#" class="btn btn-secondary">Baixar CV <i class="fas fa-download"></i></a>
-            </div>
-            
-            <div class="tech-stack">
-                <p>TECNOLOGIAS QUE TRABALHO</p>
-                <div class="tech-icons">
-                    <i class="devicon-html5-plain colored"></i>
-                    <i class="devicon-css3-plain colored"></i>
-                    <i class="devicon-javascript-plain colored"></i>
-                    <i class="devicon-python-plain colored"></i>
-                    <i class="devicon-git-plain colored"></i>
-                    <i class="devicon-github-original theme-icon"></i>
-                </div>
-            </div>
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#home" class="nav__logo">sabrina<span class="nav__logo-dot">.</span><span
+          class="nav__logo-tag">dev</span></a>
+
+      <nav class="nav__links" id="navLinks">
+        <a href="#home">home</a>
+        <a href="#sobre">sobre</a>
+        <a href="#skills">skills</a>
+        <a href="#projetos">projetos</a>
+        <a href="#contato">contato</a>
+      </nav>
+
+      <a href="#contato" class="btn btn--ghost nav__cta">vamos conversar</a>
+
+      <button class="nav__burger" id="burger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero__inner">
+        <div class="hero__text">
+          <p class="kicker">Olá, eu sou</p>
+          <h1 class="hero__name">Sabrina<br>Oliveira</h1>
+          <p class="hero__role"><span class="typewriter" id="typewriter">Desenvolvedora Front-End</span><span
+              class="cursor">|</span></p>
+          <p class="hero__bio">
+            Transformo interface em experiência. Estudo Análise e Desenvolvimento de Sistemas
+            e coloco a mão no código todos os dias — de layouts responsivos a pequenos detalhes
+            de interação que fazem uma página parecer viva.
+          </p>
+          <div class="hero__actions">
+            <a href="#projetos" class="btn btn--primary">Ver projetos</a>
+            <a href="#contato" class="btn btn--outline">Falar comigo</a>
+          </div>
+          <div class="hero__social">
+            <a href="#" aria-label="GitHub" class="icon-link">
+              <svg viewBox="0 0 24 24" width="20" height="20">
+                <path fill="currentColor"
+                  d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.02 3.29 9.28 7.86 10.79.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.34-1.28-1.7-1.28-1.7-1.04-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.02 1.76 2.68 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.3-.52-1.48.11-3.08 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.6.23 2.78.11 3.08.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.28 5.69.42.36.78 1.08.78 2.18 0 1.57-.02 2.84-.02 3.23 0 .31.21.67.8.56A10.53 10.53 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5Z" />
+              </svg>
+            </a>
+            <a href="#" aria-label="LinkedIn" class="icon-link">
+              <svg viewBox="0 0 24 24" width="20" height="20">
+                <path fill="currentColor"
+                  d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z" />
+              </svg>
+            </a>
+            <a href="#" aria-label="E-mail" class="icon-link">
+              <svg viewBox="0 0 24 24" width="20" height="20">
+                <path fill="currentColor"
+                  d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm18.4 2H3.6l8.4 6.72L20.4 6ZM3 7.68V18h18V7.68l-8.4 6.72a1 1 0 0 1-1.2 0L3 7.68Z" />
+              </svg>
+            </a>
+          </div>
         </div>
-        <div class="hero-image">
-            <div class="image-circle">
-                <img src="https://via.placeholder.com/400" alt="Sabrina Oliveira">
-            </div>
-            <div class="floating-code">
-                <code>
-                    <span class="keyword">const</span> dev = {<br>
-                    &nbsp;&nbsp;nome: <span class="string">"Sabrina"</span>,<br>
-                    &nbsp;&nbsp;skills: [<span class="string">"HTML"</span>, <span class="string">"CSS"</span>, <span class="string">"JS"</span>]<br>
-                    };
-                </code>
-            </div>
+
+        <div class="hero__art" aria-hidden="true">
+          <svg viewBox="0 0 420 520" class="sakura-art sakura-art--hero" xmlns="http://www.w3.org/2000/svg">
+            <path class="wire" d="M164,432 L112,322" />
+            <path class="wire" d="M236,322 L262,152" />
+
+            <path class="branch" d="M70,502 C118,442 58,382 108,322 C148,272 108,222 158,172 C188,142 174,102 210,62" />
+            <path class="branch branch--thin" d="M108,322 C78,304 54,296 40,266" />
+            <path class="branch branch--thin" d="M158,172 C198,166 230,160 262,152" />
+            <path class="branch branch--thin" d="M210,62 C240,52 260,46 282,40" />
+            <path class="branch branch--thin" d="M96,412 C126,408 146,414 164,432" />
+
+            <g class="blossom" transform="translate(40,266)">
+              <circle cx="-6" cy="-2" r="7" />
+              <circle cx="6" cy="-2" r="7" />
+              <circle cx="-6" cy="7" r="7" />
+              <circle cx="6" cy="7" r="7" />
+              <circle cx="0" cy="-9" r="7" />
+              <circle class="blossom__core" cx="0" cy="0" r="3" />
+            </g>
+            <g class="blossom" transform="translate(262,152) scale(0.85)">
+              <circle cx="-6" cy="-2" r="7" />
+              <circle cx="6" cy="-2" r="7" />
+              <circle cx="-6" cy="7" r="7" />
+              <circle cx="6" cy="7" r="7" />
+              <circle cx="0" cy="-9" r="7" />
+              <circle class="blossom__core" cx="0" cy="0" r="3" />
+            </g>
+            <g class="blossom" transform="translate(56,472) scale(0.7)">
+              <circle cx="-6" cy="-2" r="7" />
+              <circle cx="6" cy="-2" r="7" />
+              <circle cx="-6" cy="7" r="7" />
+              <circle cx="6" cy="7" r="7" />
+              <circle cx="0" cy="-9" r="7" />
+              <circle class="blossom__core" cx="0" cy="0" r="3" />
+            </g>
+            <g class="blossom blossom--lg" transform="translate(282,40) scale(1.1)">
+              <circle cx="-6" cy="-2" r="7" />
+              <circle cx="6" cy="-2" r="7" />
+              <circle cx="-6" cy="7" r="7" />
+              <circle cx="6" cy="7" r="7" />
+              <circle cx="0" cy="-9" r="7" />
+              <circle class="blossom__core" cx="0" cy="0" r="3" />
+            </g>
+
+            <g class="chip" transform="translate(112,322)">
+              <rect x="-28" y="-14" width="56" height="28" rx="8" />
+              <text x="0" y="5" text-anchor="middle">&lt;/&gt;</text>
+            </g>
+            <g class="chip" transform="translate(236,322)">
+              <rect x="-24" y="-14" width="48" height="28" rx="8" />
+              <text x="0" y="5" text-anchor="middle">git</text>
+            </g>
+            <g class="chip" transform="translate(164,432)">
+              <rect x="-26" y="-14" width="52" height="28" rx="8" />
+              <text x="0" y="5" text-anchor="middle">{ }</text>
+            </g>
+          </svg>
         </div>
+      </div>
     </section>
 
-    <section id="about" class="about">
-        <div class="about-text">
-            <span class="section-subtitle">SOBRE MIM</span>
-            <h2>Sou apaixonada por criar soluções digitais</h2>
-            <p>Eu sou estudante de análise e desenvolvimento de sistemas... [Complete aqui com o resto da sua história, seus objetivos e o que você gosta de fazer no mundo da tecnologia].</p>
-            <a href="#about" class="btn btn-outline">Saber mais sobre mim <i class="fas fa-user"></i></a>
-        </div>
-        <div class="about-stats">
-            <div class="stat-card">
-                <i class="fas fa-calendar-alt"></i>
-                <div>
-                    <h3>1+</h3>
-                    <p>Anos de Estudo</p>
-                </div>
-            </div>
-            <div class="stat-card">
-                <i class="fas fa-code"></i>
-                <div>
-                    <h3>10+</h3>
-                    <p>Projetos Práticos</p>
-                </div>
-            </div>
-        </div>
+    <!-- TICKER -->
+    <section class="ticker">
+      <div class="ticker__track">
+        <span>&lt;html/&gt;</span><span class="dot">·</span>
+        <span>css</span><span class="dot">·</span>
+        <span>javascript</span><span class="dot">·</span>
+        <span>git &amp; github</span><span class="dot">·</span>
+        <span>&lt;html/&gt;</span><span class="dot">·</span>
+        <span>css</span><span class="dot">·</span>
+        <span>javascript</span><span class="dot">·</span>
+        <span>git &amp; github</span><span class="dot">·</span>
+        <span>&lt;html/&gt;</span><span class="dot">·</span>
+        <span>css</span><span class="dot">·</span>
+        <span>javascript</span><span class="dot">·</span>
+        <span>git &amp; github</span><span class="dot">·</span>
+      </div>
     </section>
 
-    <section id="skills" class="skills">
-        <div class="section-header text-center">
-            <span class="section-subtitle">MINHAS SKILLS</span>
-            <h2>Tecnologias que Domino</h2>
+    <!-- SOBRE -->
+    <section class="about" id="sobre">
+      <div class="about__inner">
+        <div class="about__art" aria-hidden="true">
+          <svg viewBox="0 0 400 400" class="sakura-art sakura-art--about" xmlns="http://www.w3.org/2000/svg">
+            <path class="wire" d="M300,300 L232,222" />
+
+            <path class="branch" d="M40,360 C110,340 90,270 160,240 C210,220 200,160 260,120 C300,94 300,60 340,40" />
+            <path class="branch branch--thin" d="M160,240 C190,260 210,270 232,222" />
+            <path class="branch branch--thin" d="M260,120 C276,150 296,170 300,190" />
+            <path class="branch branch--thin" d="M340,40 C356,60 360,80 344,100" />
+
+            <g class="blossom" transform="translate(232,222) scale(0.9)">
+              <circle cx="-6" cy="-2" r="7" />
+              <circle cx="6" cy="-2" r="7" />
+              <circle cx="-6" cy="7" r="7" />
+              <circle cx="6" cy="7" r="7" />
+              <circle cx="0" cy="-9" r="7" />
+              <circle class="blossom__core" cx="0" cy="0" r="3" />
+            </g>
+            <g class="blossom blossom--lg" transform="translate(60,340)">
+              <circle cx="-6" cy="-2" r="7" />
+              <circle cx="6" cy="-2" r="7" />
+              <circle cx="-6" cy="7" r="7" />
+              <circle cx="6" cy="7" r="7" />
+              <circle cx="0" cy="-9" r="7" />
+              <circle class="blossom__core" cx="0" cy="0" r="3" />
+            </g>
+            <g class="blossom" transform="translate(344,100) scale(0.8)">
+              <circle cx="-6" cy="-2" r="7" />
+              <circle cx="6" cy="-2" r="7" />
+              <circle cx="-6" cy="7" r="7" />
+              <circle cx="6" cy="7" r="7" />
+              <circle cx="0" cy="-9" r="7" />
+              <circle class="blossom__core" cx="0" cy="0" r="3" />
+            </g>
+
+            <g class="chip" transform="translate(300,300)">
+              <rect x="-30" y="-14" width="60" height="28" rx="8" />
+              <text x="0" y="5" text-anchor="middle">html</text>
+            </g>
+            <g class="chip" transform="translate(150,150)">
+              <rect x="-26" y="-14" width="52" height="28" rx="8" />
+              <text x="0" y="5" text-anchor="middle">css</text>
+            </g>
+          </svg>
         </div>
-        <div class="skills-grid">
-            <div class="skill-item">
-                <div class="skill-info">
-                    <span><i class="devicon-html5-plain colored"></i> HTML</span>
-                    <span>100%</span>
-                </div>
-                <div class="progress-bar"><div class="progress" style="width: 100%;"></div></div>
+
+        <div class="about__content">
+          <p class="kicker">conhecendo um pouco de mim</p>
+          <h2 class="section-title">Sobre mim</h2>
+          <p class="about__text">
+            Sou desenvolvedora front-end e estudante de Análise e Desenvolvimento de Sistemas,
+            sempre buscando unir estética e funcionalidade. Gosto de pensar em cada detalhe da
+            interface — da paleta de cores ao pequeno movimento de um botão — para que o código
+            vire uma experiência agradável de usar.
+          </p>
+
+          <div class="about__cards">
+            <div class="mini-card">
+              <p class="mini-card__title">como eu trabalho</p>
+              <p class="mini-card__text">Código limpo, organizado e pensado para crescer sem virar bagunça.</p>
             </div>
-            <div class="skill-item">
-                <div class="skill-info">
-                    <span><i class="devicon-css3-plain colored"></i> CSS</span>
-                    <span>100%</span>
-                </div>
-                <div class="progress-bar"><div class="progress" style="width: 100%;"></div></div>
+            <div class="mini-card">
+              <p class="mini-card__title">meu foco</p>
+              <p class="mini-card__text">Interfaces claras, responsivas e com atenção real à experiência de quem usa.
+              </p>
             </div>
-            <div class="skill-item">
-                <div class="skill-info">
-                    <span><i class="devicon-javascript-plain colored"></i> JavaScript</span>
-                    <span>70%</span>
-                </div>
-                <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-info">
-                    <span><i class="devicon-python-plain colored"></i> Python</span>
-                    <span>90%</span>
-                </div>
-                <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-info">
-                    <span><i class="devicon-git-plain colored"></i> Git & GitHub</span>
-                    <span>100%</span>
-                </div>
-                <div class="progress-bar"><div class="progress" style="width: 100%;"></div></div>
-            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section id="projects" class="projects">
-        <div class="section-header text-center">
-            <span class="section-subtitle">PROJETOS EM DESTAQUE</span>
-            <h2>Alguns dos Meus Trabalhos</h2>
+    <!-- SKILLS -->
+    <section class="skills" id="skills">
+      <p class="kicker center">tecnologias &amp; ferramentas</p>
+      <h2 class="section-title center">Minhas Skills</h2>
+
+      <div class="skills__grid">
+        <div class="skill-bar" data-level="100">
+          <div class="skill-bar__head">
+            <span>HTML</span><span class="skill-bar__pct">100%</span>
+          </div>
+          <div class="skill-bar__track">
+            <div class="skill-bar__fill"></div>
+          </div>
         </div>
-        <div class="projects-grid">
-            
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="https://via.placeholder.com/600x400" alt="Lojinha de Artesanatos">
-                </div>
-                <div class="project-content">
-                    <span class="project-number">01</span>
-                    <h3>Pré TCC - Artesanatos</h3>
-                    <p>Site desenvolvido para uma lojinha de artesanatos, focado na exibição de produtos únicos.</p>
-                    <a href="#" class="project-link">Ver Projeto <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
 
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="https://via.placeholder.com/600x400" alt="Site de Bolos">
-                </div>
-                <div class="project-content">
-                    <span class="project-number">02</span>
-                    <h3>TCC - Confeitaria</h3>
-                    <p>Um site interativo e atrativo para venda de bolos sob encomenda.</p>
-                    <a href="#" class="project-link">Ver Projeto <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="https://via.placeholder.com/600x400" alt="Site de Tênis">
-                </div>
-                <div class="project-content">
-                    <span class="project-number">03</span>
-                    <h3>E-commerce de Tênis</h3>
-                    <p>Landing page moderna para um cliente focado na venda de calçados esportivos.</p>
-                    <a href="#" class="project-link">Ver Projeto <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-
+        <div class="skill-bar" data-level="100">
+          <div class="skill-bar__head">
+            <span>CSS</span><span class="skill-bar__pct">100%</span>
+          </div>
+          <div class="skill-bar__track">
+            <div class="skill-bar__fill"></div>
+          </div>
         </div>
+
+        <div class="skill-bar" data-level="80">
+          <div class="skill-bar__head">
+            <span>JavaScript</span><span class="skill-bar__pct">80%</span>
+          </div>
+          <div class="skill-bar__track">
+            <div class="skill-bar__fill"></div>
+          </div>
+        </div>
+
+        <div class="skill-bar" data-level="80">
+          <div class="skill-bar__head">
+            <span>Git &amp; GitHub</span><span class="skill-bar__pct">80%</span>
+          </div>
+          <div class="skill-bar__track">
+            <div class="skill-bar__fill"></div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <footer id="contact">
-        <div class="footer-top">
-            <div class="footer-cta">
-                <span class="section-subtitle">VAMOS TRABALHAR JUNTOS</span>
-                <h2>Tem um projeto em mente?</h2>
-                <p>Estou sempre aberta a discutir novos projetos e oportunidades. Vamos criar algo incrível!</p>
-                <a href="#" class="btn btn-primary">Entrar em contato <i class="fas fa-arrow-up-right-from-square"></i></a>
-            </div>
-            
-            <div class="footer-testimonial">
-                <i class="fas fa-quote-left quote-icon"></i>
-                <p>"A Sabrina é uma desenvolvedora muito dedicada, com um olhar afiado para o design e ótima resolução de problemas."</p>
-                <div class="author">
-                    <img src="https://via.placeholder.com/50" alt="Avatar">
-                    <div>
-                        <h4>Nome do Cliente/Professor</h4>
-                        <span>Cargo ou Título</span>
-                    </div>
-                </div>
-            </div>
+    <!-- PROJETOS -->
+    <section class="projects" id="projetos">
+      <p class="kicker center">últimos trabalhos</p>
+      <h2 class="section-title center">Projetos</h2>
 
-            <div class="footer-social">
-                <span class="section-subtitle">SIGA-ME</span>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-                <div class="contact-info">
-                    <a href="mailto:seuemail@exemplo.com"><i class="fas fa-envelope"></i> seuemail@exemplo.com</a>
-                    <a href="tel:+5511999999999"><i class="fas fa-phone"></i> +55 (11) 99999-9999</a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Sabrina Oliveira. Todos os direitos reservados.</p>
-            <p>Feito com <i class="fas fa-heart" style="color: #ff4757;"></i> por Sabrina</p>
-        </div>
-    </footer>
+      <div class="projects__grid">
 
-    <script src="script.js"></script>
+        <article class="project-card">
+          <div class="project-card__thumb project-card__thumb--craft" aria-hidden="true">
+            <svg viewBox="0 0 200 140" class="thumb-svg">
+              <rect x="0" y="0" width="200" height="140" rx="14" />
+              <circle class="p1" cx="60" cy="55" r="22" />
+              <circle class="p2" cx="100" cy="80" r="30" />
+              <circle class="p3" cx="145" cy="45" r="16" />
+            </svg>
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__eyebrow">pré-tcc</p>
+            <h3 class="project-card__title">Sakura</h3>
+            <p class="project-card__text">Loja virtual de artesanatos, com catálogo visual simples e navegação pensada
+              para destacar cada peça feita à mão.</p>
+            <div class="project-card__tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Git</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#">código</a>
+              <a href="#">ver site</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__thumb project-card__thumb--bakery" aria-hidden="true">
+            <svg viewBox="0 0 200 140" class="thumb-svg">
+              <rect x="0" y="0" width="200" height="140" rx="14" />
+              <circle class="p1" cx="70" cy="60" r="26" />
+              <circle class="p2" cx="120" cy="85" r="24" />
+              <circle class="p3" cx="140" cy="45" r="14" />
+            </svg>
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__eyebrow">tcc</p>
+            <h3 class="project-card__title">Impérios dos Bolos, Doces e Salgados</h3>
+            <p class="project-card__text">Cardápio digital com galeria de produtos e fluxo de encomendas para uma
+              confeitaria — projeto de conclusão de curso.</p>
+            <div class="project-card__tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Git</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#">código</a>
+              <a href="#">ver site</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__thumb project-card__thumb--shoes" aria-hidden="true">
+            <svg viewBox="0 0 200 140" class="thumb-svg">
+              <rect x="0" y="0" width="200" height="140" rx="14" />
+              <path class="p1" d="M40 95c0-20 18-40 45-40s55 15 65 32c4 6-1 13-8 13H45c-3 0-5-2-5-5Z" />
+              <circle class="p3" cx="150" cy="55" r="10" />
+            </svg>
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__eyebrow">projeto para cliente</p>
+            <h3 class="project-card__title">Douglas Calçados</h3>
+            <p class="project-card__text">Site institucional para uma loja de calçados, com catálogo de produtos e
+              contato direto para pedidos.</p>
+            <div class="project-card__tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Git</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#">código</a>
+              <a href="#">ver site</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="contact" id="contato">
+      <div class="contact__inner">
+        <p class="kicker">vamos trabalhar juntas?</p>
+        <h2 class="section-title">Contato</h2>
+        <p class="contact__text">Tô sempre aberta a novos projetos, freelas e boas conversas sobre front-end. Me chama
+          por qualquer um dos canais abaixo.</p>
+
+        <div class="contact__grid">
+          <a href="mailto:seuemail@exemplo.com" class="contact-card">
+            <svg viewBox="0 0 24 24" width="22" height="22">
+              <path fill="currentColor"
+                d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm18.4 2H3.6l8.4 6.72L20.4 6ZM3 7.68V18h18V7.68l-8.4 6.72a1 1 0 0 1-1.2 0L3 7.68Z" />
+            </svg>
+            <span>
+              <strong>e-mail</strong>
+              <em>seuemail@exemplo.com</em>
+            </span>
+          </a>
+
+          <a href="https://wa.me/5500000000000" class="contact-card">
+            <svg viewBox="0 0 24 24" width="22" height="22">
+              <path fill="currentColor"
+                d="M12.01 2C6.49 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.08-1.33A9.94 9.94 0 0 0 12.01 22C17.52 22 22 17.52 22 12S17.52 2 12.01 2Zm5.72 14.14c-.24.68-1.4 1.3-1.93 1.35-.5.06-1.13.08-1.82-.11-.42-.12-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.28.58-.35.78-.35.19 0 .39 0 .56.01.18.01.42-.07.65.5.24.58.82 2 .89 2.14.07.14.12.31.02.5-.09.2-.14.31-.28.48-.14.16-.29.36-.42.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.53 1.9 1.05.93 1.93 1.22 2.21 1.36.28.14.44.12.6-.07.16-.19.68-.79.86-1.06.18-.28.36-.23.6-.14.24.09 1.55.73 1.82.86.27.14.45.2.51.32.07.12.07.66-.17 1.33Z" />
+            </svg>
+            <span>
+              <strong>whatsapp</strong>
+              <em>+55 (00) 00000-0000</em>
+            </span>
+          </a>
+
+          <a href="#" class="contact-card">
+            <svg viewBox="0 0 24 24" width="22" height="22">
+              <path fill="currentColor"
+                d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z" />
+            </svg>
+            <span>
+              <strong>linkedin</strong>
+              <em>/in/seu-usuario</em>
+            </span>
+          </a>
+
+          <a href="#" class="contact-card">
+            <svg viewBox="0 0 24 24" width="22" height="22">
+              <path fill="currentColor"
+                d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.02 3.29 9.28 7.86 10.79.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.34-1.28-1.7-1.28-1.7-1.04-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.02 1.76 2.68 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.3-.52-1.48.11-3.08 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.6.23 2.78.11 3.08.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.28 5.69.42.36.78 1.08.78 2.18 0 1.57-.02 2.84-.02 3.23 0 .31.21.67.8.56A10.53 10.53 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5Z" />
+            </svg>
+            <span>
+              <strong>github</strong>
+              <em>/seu-usuario</em>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Sabrina Oliveira <span class="footer__dot">·</span> desenvolvido com <span class="footer__heart">&lt;/&gt;</span>
+      e café</p>
+    <a href="#home" class="footer__top">voltar ao topo ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
