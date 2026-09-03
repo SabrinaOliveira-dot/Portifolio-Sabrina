@@ -66,6 +66,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* ---------- Scroll reveal das seções ---------- */
+const revealEls = document.querySelectorAll('.reveal');
+
+if ('IntersectionObserver' in window && revealEls.length) {
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  revealEls.forEach((el) => revealObserver.observe(el));
+} else {
+  revealEls.forEach((el) => el.classList.add('is-visible'));
+}
   /* ---------- Ambient floating petals ---------- */
   const petalsContainer = document.getElementById('petals');
 
@@ -92,4 +109,17 @@ document.addEventListener('DOMContentLoaded', () => {
       petalsContainer.appendChild(petal);
     }
   }
+
+  /* ---------- Foto de perfil e logos dos projetos ---------- */
+  const imagesToWatch = document.querySelectorAll('.portrait__img, .project-card__logo');
+
+  imagesToWatch.forEach((img) => {
+    // Se a imagem já estava em cache e carregou antes do listener ser anexado
+    if (img.complete && img.naturalWidth > 0) {
+      img.classList.add('is-loaded');
+      return;
+    }
+    img.addEventListener('load', () => img.classList.add('is-loaded'));
+    img.addEventListener('error', () => img.classList.remove('is-loaded'));
+  });
 });
